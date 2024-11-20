@@ -1,0 +1,390 @@
+Library
+Usage: Collection of functions you call as needed.
+Control: You control when and how to use it.
+Examples: React.
+Framework
+Usage: Provides a structured foundation for building applications.
+Control: It controls the flow (Inversion of Control).
+Examples: Angular.
+
+
+
+
+Difference between React and Angular?
+
+Parameters                           React                                     Angular
+library/framework               -React is Library                       -Angular is a framework.
+languages                       -js and XML                             -TypeScript.
+DOM                             -Virtual DOM                            -Real DOM
+Performance                     -faster than angular                    -slower than react
+Depeloped BY                    -Facebook                                 -Google
+
+
+What is react?
+It is a js Library.
+Used to create rich user interface
+it create sigle page application(SPA).
+Designed and Developed by Facebook.
+latest version of React 18.
+
+
+*software pre-requisit
+-nodejs
+-npm
+-react
+-editor
+
+*technology must know
+-html
+-css
+-js(basic js,es6,es5,oops)
+
+
+*how to create react appliaction?
+There are three ways-
+1> By using npx: no need to install configuration file.
+-npx create-reat-app reactprojectname
+-cd reactproject.
+-npm start
+
+2> By using npm: need to install configuration file.
+-npm install -g create-reat-app
+-create-react-app reactprojectname
+-cd reactproject.
+-npm start
+
+*Folder structure of react app
+node modules:in this all dependencies and
+ dev-dependencies will install in it.
+
+ package.json:all intalled dependencies entry will found here.
+ package-lock.json:it will contain detail info about installed dependencies.
+
+ README.md:it is guide for react app.
+ gitignore: it will containes names of files which are not going to upoad on git repo.
+
+ public:it contain static files in it.
+
+
+*react work on component basis.
+*compoonent :it is partial partial part of react app.
+-which can we reuse throught react app.
+-it can be any part of react app.
+Note:in react app.js is root component
+
+*In react there are two types of components.
+1:function component.(When your aim focus is on ui design we use function component)
+2:class component.(when we have to implement and write complex logic in that case we use it. )
+
+
+NOTE:WHILE CREATING COMPONENTS IN REACT ITS FIKE NAME START WITH CAPITAL LETTER.
+
+
+*how to display component output oe view?
+-to get output of any component for this first we have to import it and them write its name as tag where you want.
+
+*class component.
+how to create class component and get its output.
+-create file with ext js .
+-first import React from react.
+-create class and extends it with Component class.
+Other wise it will treated as simple class.
+-that if we have to return something from it use render method render(){
+
+}
+
+element
+*what is JSX
+-JSX(javascript and XML);
+-it makes react code easy and allows us to write html code in react.
+-in jsx we have to put all  inside one parent element. in function
+-the parent element must be block element.
+
+
+
+*props:
+-it is parameter or functional parameter which is use to pass data inside component.
+-it returns object type of data.
+-in function we can access props by writing props.prosName. it will access like={props.fname}
+-in class coponent we can access props by writing this.props,propsName. it will access like{this.props.fname}
+
+*what is state?
+-it is use to handle essential data in class component.
+-state always write inside class constructor.
+-it returns object type of data.
+-in class component we can access state property by wirting this.state.propertyName.
+
+After React 16.
+*we can use state in function component by using useState Hook.
+
+
+*setState(): this method is use to manipulate update state property values in class component.
+
+
+
+how to use css in react?
+1.internal
+2.inline
+3.external
+4.module css:
+-it is use when we have to write css property for particular component.
+-it will be applicable only when you import it.
+- to create module css use filename.module.css
+
+
+*how to use bootstrap in react?
+step1.install bootstrap in project.
+npm i bootstrap
+import "/bootstrap/dist/css/bootstrap.min.css";
+
+
+*Conditional Rendering
+-display component output on the basis if condition.
+1.if else :in this if condition if true diplay block if false display another block.
+
+2.element as a variable :in this we strore result in a varivale and that variable we return on the basis of condition.
+
+3.use of ternary operator
+
+4.short circuit(&&):it is use of null checking.and will display output only when condition is true.
+
+
+*How to insert images and multimedia files in react project?
+create a component.
+
+
+
+
+*Component Interaction?
+-Accessing data from parent component to child Component
+-to perform this first we have inbetween component they must have parent child relation.
+
+ParentComp(cc)
+-create state having empname and salary and display it.
+-implement logic so after click on button emplname ans salary must change.
+
+
+*how to pass state property as props?
+
+
+*PureComponent in React
+-it is a component which is provided by react,which is used to prevent un-necessary re rendering of class component.,By comparing shallow comparision
+-to achive this we extends component with pure component class.
+
+*React.memo():
+-it is a component which is provided by react,which is used to prevent un-necessary re rendering of function component.,By comparing shallow comparision
+-to achive this we pass function component name as a argument to React.memo() method.
+
+*Virtual Dom?
+In React instead of manipulating browser DOM directly react creats virtual dom in its memory .
+-where it does all the necesaary changes before performing in the real dom.
+-Vitual dom chnages that need to be change only.
+-that is why react is faster.
+
+
+React.Fragment or Fragment:it is used to remove un-necessary Dom element from  heirarchy.
+
+*react-Bootstrap: it will provide us inbuilt component which we use to make react app attractive and responsive.
+step1:install it
+npm install react-bootstrap bootstrap
+Step 2:import its path in index.js file
+
+MyCarousalComp(fc)
+import Carousel from 'react-bootstrap/Carousel';
+import Cards from 'react-bootstrap/Cards';
+
+import {,cards} from 'react-bootstrap';
+
+there must be bootstrap install in you project and imported in index.js
+
+
+*use of snippet
+rce:to create class component.
+rconst:it will create constructor,super(),this.state.
+rfce:it will create functional component.
+rafce:it will create arrow functional component.
+ClickCounterComp()
+
+
+*Higher Order Component(HOC)
+-when we have to share common business logic with multipe component.
+-for HOC we write logic in functional component and share data from it.
+
+
+*ErrorBoundary
+-it is react component,which is use to handle error occured in component tree while renderin component.
+-it handle error which occur at the time component render.
+-to ahieve this we use two class component lifecycle method
+-1>getDerivedStateFromError:this is static ,it will ecxecute automatically whn error occur in child component.
+2>componentDidcatch:it will error long or error information.
+
+UserComp(fc)
+
+*Class Component lifecycle method:
+-class component lifecycle method comes with four phases
+1.Mounting Phase: when component get initialized.
+    -constructor: it execute automatically when component initalize.
+    -getDerivedStateFromProps: when you have to assign props value to state.
+    -render:it is use to display component output.
+    -componentDidMount: it will execute after render method.
+2.Update Phase:
+    -constructor
+    -shouldComponentUpdate: it will decide whether componet will update or  not.
+                            -it return boolean result.
+                            -if value is true component will update other wise not.
+    -getSnapShotBeforeupdate: it will return state or props value before updation of it.
+    -render:it will display component output.
+    -componentDidUpdate:
+3.Unmounting Phase:component will delete or remove.
+-componentWillUnmount:it will executebjust beforre component remove or delete,
+it will disconnect all connection with other and server.
+
+4.Error Phase: to handle error
+-1>getDerivedStateFromError:this is static ,it will ecxecute automatically whn error occur in child component.
+2>componentDidcatch:it will error long or error information.
+
+
+*Hooks in react:
+-it allows us to use class component feature in a function component.
+-by using react hooks we an use state in funtion component.
+-react hoos introduce in react version 16
+
+*Rules to use hooks:
+-Hooks will work only in function component.
+-Hooks always in top level component.
+-Hooks cannot be render conditionally.
+
+
+*there are seven hooks in react.
+1>useState Hook
+2>useEffect Hook
+3>useContext Hook
+4>useRef Hook
+5>usereducer Hook
+6>useMemo Hook
+7>useCallback Hook
+
+*useState hook:
+-it allows us to use state in function component.
+-it return two values.1.currentState,2.method-of-update-current-state
+-useState hook accept all type of data(number,string,boolean,array,object)
+-before using it import it first.
+
+*Routing in react?
+-if you want to navigate from one component to another for that we use it.
+-to perform routinh in react we have to install react-router-dom library in reat project.
+ types of routing?
+ 1.naming routing:to dispaly component write component path in browser url to get output of it.
+
+ 2.default routing:when we have to dislay component output without writing its routing path name in browser url.
+
+ 3.parameteried routing:display component output only when we pass parameter with its routing path name,
+
+ 4.child routing:when we have to dispaly one routing inside another routing in that case we use it.
+  -to perform child routing we user children object.
+ -to display child component output in parent component for that we have add <Outlet/> directory in parent component.
+
+
+ 5.wild card routing:when user enter wrong routing path name in browser url in that we direct user to particular component in that case we use it.
+ -for wild card routing in its path name we write * symbol.
+ -impNote:wild card routing always write at ;ast,its below routing will never work.
+
+ how to install react-router-dom library?
+ npm i react-router-dom
+ *react-router-dom library provide two directory
+ 1.createBrowserRouter:it is a method which states values as an array of objects
+ -in this we create routing path for component.
+ -to create route we use object having path element property.
+
+ 2.RouterProvider:it display component routing on browser.
+
+ *use of Link directory
+ 
+ src Folder
+    mainRoutingFolder
+        -routing.js(file)
+
+
+ src Folder 
+    layout Folder 
+        LoginComp(fc)
+        NavComp(fc)
+        FooterComp(fc)
+        MainDashBoardComp(fc)
+        PageNotFoundComp(fc)
+
+
+  *useEffect Hook:     
+-it is use to perform side effect in function component.
+-side effect means , fetching data from server, use of timer, Dom manipulation
+-useEffect hook execute after function component render.
+it will return two values:1>callback function,2>dependency
+syntax:useEffect(()=>{},dependency)
+
+case1:when we donot pass second parameter
+
+
+
+
+
+
+
+
+
+
+
+
+src Folder
+    CRUD Folder
+        productDashComp(fc)
+        AddproductComp(fc)
+        EditProductComp(fc)
+
+*Axios Library:
+-it is use to make request from react app to server-it works on promisses concept
+-how to install Axios
+npm i axios
+
+
+material Ui:
+-it is use to make recat attractive and responsive.
+-it provide inbuilt component.
+-as well as it provide icon.
+www.mui.com
+how to install?
+npm install @mui/material @emotion/react @emotion/styled
+
+how to install matrial icon?
+npm install @mui/icons-material
+
+useNavigate hook
+useParam hook
+
+useRef hook: it is used to access DOM node directly.
+            -it has a object with name current .
+
+REact :it is use to create Rich Ui
+    -it is js library.
+
+Redux:it is a predictable state container for js app.
+    or
+    it is used to store,manage,and track state centrally for js app.
+    it is not tied with react only.it can be used with app js app.
+    how to install?
+     npm i redux
+    *redux work on three core principle
+    Action: it is a statement (operarion) which we are going to perform.
+    store:it is used to store state in it.
+    Reducer:it actually carrryout state transition depeneding on action and store .
+            -after performing operation it return new state.
+
+    *how to access state and action from redux to react function component?
+    -useSelector hook:it is used to access state from redux store to react function component.
+    -useDispatch Hook:it is use to call action from redux to react function component.
+   
+
+react-redux library:to connect react app with redux library for that we use react-redux library.
+
+*web Storage:it is use to store user data on browser.
+1>local Storage:it is uswed to store user data fro permanent.
+2:session storage:it is use to store user data for temporaray
